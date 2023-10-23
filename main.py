@@ -2,6 +2,9 @@ import ana_ekran,sys
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QFont,QFontDatabase,QColor,QPalette
 from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QMessageBox
+
+
 class Pencere(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
@@ -14,7 +17,9 @@ class Pencere(QtWidgets.QWidget):
         self.gizle_ucuncu_grup()
         self.gizle_dorduncu_grup()
         self.gizle_besinci_grup()
-
+        self.pencere.pushButton_71.setText(" ")
+        self.tahta_text="<html>"
+        self.renk_kodu="#000000"
         self.pencere.pushButton_65.clicked.connect(self.cikis)
         self.pencere.pushButton.clicked.connect(self.goster_birinci_grup)
         self.pencere.pushButton_2.clicked.connect(self.goster_ikinci_grup)
@@ -80,6 +85,12 @@ class Pencere(QtWidgets.QWidget):
         self.pencere.pushButton_62.clicked.connect(self.buttonClicked)
         self.pencere.pushButton_63.clicked.connect(self.buttonClicked)
         self.pencere.pushButton_64.clicked.connect(self.silgi)
+        self.pencere.pushButton_67.clicked.connect(self.ColorSelect)
+        self.pencere.pushButton_71.clicked.connect(self.buttonClicked)
+        self.pencere.pushButton_66.clicked.connect(self.buttonClicked)
+        self.pencere.pushButton_68.clicked.connect(self.buttonClicked)
+        self.pencere.pushButton_69.clicked.connect(self.buttonClicked)
+        self.pencere.pushButton_70.clicked.connect(self.hakkinda)
         self.showFullScreen()###   Gösterimmmmm
     def gizle_birinci_grup(self):
         self.pencere.label_2.hide()
@@ -144,17 +155,52 @@ class Pencere(QtWidgets.QWidget):
     def buttonClicked(self):
         sender=self.sender()
         if sender:
-            self.tahta_text=self.tahta_text+sender.text()
+            if sender==self.pencere.pushButton_66:
+                self.tahta_text = self.tahta_text + "<font color='" + self.renk_kodu + "'>" + "?" + "</font>"
 
-            self.pencere.label_7.setText(self.tahta_text)
+                self.pencere.label_7.setText(self.tahta_text)
+            elif sender==self.pencere.pushButton_68:
+                self.tahta_text = self.tahta_text + "<font color='" + self.renk_kodu + "'>" + "." + "</font>"
+
+                self.pencere.label_7.setText(self.tahta_text)
+            elif sender == self.pencere.pushButton_69:
+                self.tahta_text = self.tahta_text + "<font color='" + self.renk_kodu + "'>" + "!" + "</font>"
+
+                self.pencere.label_7.setText(self.tahta_text)
+            else:
+                self.tahta_text = self.tahta_text + "<font color='" + self.renk_kodu + "'>" + sender.text() + "</font>"
+
+                self.pencere.label_7.setText(self.tahta_text)
     def silgi(self):
 
-        self.tahta_text=self.pencere.label_7.text()[:-1]
+        self.tahta_text=self.pencere.label_7.text()[:-30]
         self.pencere.label_7.setText(self.tahta_text)
     def cikis(self):
         sys.exit()
+    def ColorSelect(self):
+        renk = QtWidgets.QColorDialog.getColor()
+        if renk.isValid():
+           self.renk_kodu=renk.name()
 
+    def hakkinda(self):
+        about_text = """
+        PROGRAM EĞİTİMCİ ARKADAŞLAR İÇİN HAZIRLANMIŞ OLUP KULLANIMI TAMAMEN ÜCRETSİZDİR. 
 
+        Programlama:Sedat DEMİR
+
+        İstek,Öneri ve Fikirleriniz İçin:        
+        İletişim:zeminkat.lab@gmail.com
+        https://github.com/zeminkat  
+
+        Not:Düzgün çalışabilmesi için ekran çözünürlüğü 1920*1080 olmalı ve program dosyalarında      değişiklik yapılmamalıdır.
+
+        -------------------------------------------------------------------------------------------------------------------
+        Programın kullanımından,dosyalarının değiştirilmesi,içeriğinin bozulması gibi durumlardan kullanıcı sorumludur.
+        Açık kaynak kodlu hazırlanmış olup özgür yazılım felsefesi gereği programımızın kodları https://github.com/zeminkat adresinde yayımlanmıştır.
+        -------------------------------------------------------------------------------------------------------------------
+        
+        """
+        QMessageBox.information(self, "Hakkında", about_text)
 
 app=QtWidgets.QApplication(sys.argv)
 
