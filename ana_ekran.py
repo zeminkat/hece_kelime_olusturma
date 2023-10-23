@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ana_ekran.ui'
+# Form implementation generated from reading ui file 'C:\Users\Sedat\Desktop\Programlarım\Hece Oluşturma\ana_ekran.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -1194,7 +1194,7 @@ class Ui_Form(object):
         self.label_7.setGeometry(QtCore.QRect(460, 220, 941, 471))
         self.label_7.setObjectName("label_7")
         self.pushButton_64 = QtWidgets.QPushButton(Form)
-        self.pushButton_64.setGeometry(QtCore.QRect(150, 280, 211, 141))
+        self.pushButton_64.setGeometry(QtCore.QRect(200, 280, 211, 141))
         self.pushButton_64.setStyleSheet("QPushButton{\n"
 "border-radius:20px;\n"
 "    background-image: url(:/newPrefix/sil.png) ;\n"
@@ -1229,6 +1229,116 @@ class Ui_Form(object):
 "}")
         self.pushButton_65.setText("")
         self.pushButton_65.setObjectName("pushButton_65")
+        self.pushButton_67 = QtWidgets.QPushButton(Form)
+        self.pushButton_67.setGeometry(QtCore.QRect(20, 150, 201, 191))
+        font = QtGui.QFont()
+        font.setFamily("TTKB Dik Temel Abece")
+        font.setPointSize(35)
+        font.setBold(True)
+        font.setWeight(75)
+        font.setStrikeOut(False)
+        self.pushButton_67.setFont(font)
+        self.pushButton_67.setStyleSheet("QPushButton{\n"
+"border-radius:20px;\n"
+"    background-image: url(:/newPrefix/palet1.png) ;\n"
+"background-repeat: no-repeat;\n"
+"background-color: transparent;\n"
+"\n"
+"}\n"
+"QPushButton:hover{\n"
+"    background-image: url(:/newPrefix/palet2.png);\n"
+"background-repeat: no-repeat;\n"
+"background-color: transparent;}")
+        self.pushButton_67.setText("")
+        self.pushButton_67.setObjectName("pushButton_67")
+        self.pushButton_71 = QtWidgets.QPushButton(Form)
+        self.pushButton_71.setGeometry(QtCore.QRect(820, 660, 261, 61))
+        font = QtGui.QFont()
+        font.setFamily("TTKB Dik Temel Abece")
+        font.setPointSize(35)
+        font.setBold(True)
+        font.setWeight(75)
+        font.setStrikeOut(False)
+        self.pushButton_71.setFont(font)
+        self.pushButton_71.setStyleSheet("QPushButton{\n"
+"\n"
+"border-radius:20px;\n"
+"background-color: #dedede;\n"
+"}\n"
+"QPushButton:hover{\n"
+"background-color: #959595;\n"
+"\n"
+"}")
+        self.pushButton_71.setText("")
+        self.pushButton_71.setObjectName("pushButton_71")
+        self.pushButton_66 = QtWidgets.QPushButton(Form)
+        self.pushButton_66.setGeometry(QtCore.QRect(1310, 660, 101, 111))
+        self.pushButton_66.setStyleSheet("QPushButton{\n"
+"border-radius:20px;\n"
+"    background-image: url(:/newPrefix/soru1.png) ;\n"
+"background-repeat: no-repeat;\n"
+"background-color: transparent;\n"
+"\n"
+"}\n"
+"QPushButton:hover{\n"
+"    background-image: url(:/newPrefix/soru2.png);\n"
+"background-repeat: no-repeat;\n"
+"background-color: transparent;\n"
+"\n"
+"\n"
+"}")
+        self.pushButton_66.setText("")
+        self.pushButton_66.setObjectName("pushButton_66")
+        self.pushButton_68 = QtWidgets.QPushButton(Form)
+        self.pushButton_68.setGeometry(QtCore.QRect(1190, 660, 101, 111))
+        self.pushButton_68.setStyleSheet("QPushButton{\n"
+"border-radius:20px;\n"
+"    background-image: url(:/newPrefix/nokta1.png) ;\n"
+"background-repeat: no-repeat;\n"
+"background-color: transparent;\n"
+"\n"
+"}\n"
+"QPushButton:hover{\n"
+"    background-image: url(:/newPrefix/nokta2.png);\n"
+"background-repeat: no-repeat;\n"
+"background-color: transparent;\n"
+"\n"
+"\n"
+"}")
+        self.pushButton_68.setText("")
+        self.pushButton_68.setObjectName("pushButton_68")
+        self.pushButton_69 = QtWidgets.QPushButton(Form)
+        self.pushButton_69.setGeometry(QtCore.QRect(1120, 650, 101, 131))
+        self.pushButton_69.setStyleSheet("QPushButton{\n"
+"border-radius:20px;\n"
+"    background-image: url(:/newPrefix/unlem1.png) ;\n"
+"background-repeat: no-repeat;\n"
+"background-color: transparent;\n"
+"\n"
+"}\n"
+"QPushButton:hover{\n"
+"    background-image: url(:/newPrefix/unlem2.png);\n"
+"background-repeat: no-repeat;\n"
+"background-color: transparent;\n"
+"\n"
+"\n"
+"}")
+        self.pushButton_69.setText("")
+        self.pushButton_69.setObjectName("pushButton_69")
+        self.pushButton_70 = QtWidgets.QPushButton(Form)
+        self.pushButton_70.setGeometry(QtCore.QRect(1800, 1040, 121, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.pushButton_70.setFont(font)
+        self.pushButton_70.setStyleSheet("QPushButton{\n"
+"border-radius:10px;\n"
+"background-color: rgb(2, 177, 253);\n"
+"}\n"
+"QPushButton:hover{\n"
+"background-color: rgb(2, 150, 253);\n"
+"\n"
+"}")
+        self.pushButton_70.setObjectName("pushButton_70")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -1295,6 +1405,7 @@ class Ui_Form(object):
         self.pushButton_62.setText(_translate("Form", "J"))
         self.pushButton_63.setText(_translate("Form", "j"))
         self.label_7.setText(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
+        self.pushButton_70.setText(_translate("Form", "Hakkında"))
 import ana_ekran_rc
 
 
